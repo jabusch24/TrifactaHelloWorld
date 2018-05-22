@@ -3,7 +3,7 @@ a first shot on trifacta data wrangling, documentation in the readme
 
 1. The downloaded csv file is imported to Trifacta.
 2. Trifacta automatically leads us to the transformer, where we can turn our messy data into clean data. 
-![alt text](TrifactaHelloWorld/images/1_start.PNG "1 Start")
+![alt text](TrifactaHelloWorld/images/1_start.PNG)
 
 3. First of all, we investigate on the data types of our columns by clicking the column name bar and choosing the data type we would like to set.
 4. Then, the data quality bar will give us an indication of how many rows do not comply with our set data type. 
