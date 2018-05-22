@@ -1,6 +1,7 @@
 # TrifactaHelloWorld
-a first shot on trifacta data wrangling, documentation in the readme
+A first shot on trifacta data wrangling, documentation in the readme
 
+## Cleaning sample data
 1. The downloaded csv file is imported to Trifacta.
 2. Trifacta automatically leads us to the transformer, where we can turn our messy data into clean data. 
 ![alt text](https://github.com/jabusch24/TrifactaHelloWorld/blob/master/images/1_start.PNG)
@@ -20,3 +21,16 @@ with the final recipe:
 
 6. Finally we simply export the final outcome csv to place it into our github.  
 ![alt text](https://github.com/jabusch24/TrifactaHelloWorld/blob/master/images/7_generate_results.PNG)
+
+## Cleaning power outage data
+In order to clean the data set "15-years-of-power-outages", I recommend the following cleaning steps:
+
+1. First, I recommend changing the "Date_of_Restoration" and "Time_of_Restoration" to NULL wherever is is not in the appropriate format. 
+2. Secondly, we trim the "Geographic_areas" and turn it into lowercase. 
+3. "Number_of_customers_affected" appears to be quite dirty, thanks to many "Unknowns","0" and "N/A". Thus we get rid of those and turn them to NULL. Clearing them by statistical means would have too large of an impact. The result is a clear histogram with relevant information. 
+4. Additionally, we need to get rid of any commas and additional strings, until we can finally change the datatype to an integer to create a relevant histogram. 
+5. Finally, we split the tags into two seperate tag columns to analyze them appropriately. The screenshot shows a copy of the summary and the final recipe with data.
+![alt text](https://github.com/jabusch24/TrifactaHelloWorld/blob/master/images/8_summary.PNG)
+![alt text](https://github.com/jabusch24/TrifactaHelloWorld/blob/master/images/9_recipe.PNG)
+
+
